@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.administrator.viewdraghelperdemo3.DragLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0d50b53"
+    tools:context=".MainActivity">
+
+    <!--左面版-->
+    <LinearLayout
+        android:background="#e0d50b53"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="50dp"
+        android:paddingTop="50dp">
+
+        <ImageView
+            android:id="@+id/lvLeft2"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:src="@drawable/a_01"/>
+
+        <ListView
+            android:background="#e0d50b53"
+            android:id="@+id/lv_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <!--主面板，这样就可以保证主面板在上，左面版在下-->
+    <com.example.administrator.viewdraghelperdemo3.MyLinearLayout
+        android:id="@+id/my_main_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e0a882c1"
+            android:gravity="left|center">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/iv_main"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/a_01"/>
+
+            <TextView
+                android:textColor="#b9c406"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="台灣好好玩"/>
+        </LinearLayout>
+
+        <ListView
+            android:background="#e0824ca7"
+            android:id="@+id/lv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.example.administrator.viewdraghelperdemo3.MyLinearLayout>
+</com.example.administrator.viewdraghelperdemo3.DragLayout>
